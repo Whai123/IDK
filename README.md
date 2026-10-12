@@ -80,6 +80,8 @@ This first inspector proposes work from project documentation and setup signals.
 
 The adapters use Claude Code and Codex CLIs installed and signed in on the server machine. There is no account with a third-party model gateway to create. A laptop login is available only if the CLI is running on that same machine with that login.
 
+The worker host also needs writable CLI runtime storage and access to the provider's endpoints. Sign-in alone does not prove that a job can start. Run `npm run pilot` for local prerequisite checks; `npm run pilot -- --run` explicitly starts one bounded Codex Engineering task and its independent QA handoff, using provider usage. See the [local pilot guide](docs/LOCAL_PILOT.md) for setup and evidence review.
+
 Sign in using each provider's normal CLI flow, then check its status in settings. Provider execution starts disabled. Enable it when ready to run assigned tasks against the connected repository. Runs are serialized and isolated in Git worktrees; a committed, clean repository is required. Failed or interrupted work stays visible, and outputs are offered for review. Accepting a delivery records review status; it does not merge the worktree into your main branch.
 
 Agent reports and recorded command output are separate evidence. An agent's statement that tests passed is not automatically a verified test result. Marketing outputs are drafts; this version does not publish posts, contact leads, or purchase ads.
