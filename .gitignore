@@ -1,0 +1,10 @@
+node_modules/
+dist/
+playwright-report/
+test-results/
+.cache/
+.startup-workspace/
+.startup-os/
+.env
+.env.*
+!.env.example
